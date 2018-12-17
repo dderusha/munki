@@ -147,7 +147,6 @@ def writePlistToString(rootObject):
 #set the plistkey the the key in the file you want to read.
 # plist_location put the full path to your plist file.
 if __name__ == '__main__':
-    import sys
     plistkey = 'CFBundleShortVersionString'
     plist_location = '/Applications/Microsoft Excel.app/Contents/Info.plist'
     prefs2read = readPlist(plist_location)
