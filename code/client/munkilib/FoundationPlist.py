@@ -144,5 +144,12 @@ def writePlistToString(rootObject):
         return str(plistData)
 
 
+#set the plistkey the the key in the file you want to read.
+# plist_location put the full path to your plist file.
 if __name__ == '__main__':
-    print 'This is a library of support tools for the Munki Suite.'
+    import sys
+    plistkey = 'CFBundleShortVersionString'
+    plist_location = '/Applications/Microsoft Excel.app/Contents/Info.plist'
+    prefs2read = readPlist(plist_location)
+    manifest = prefs2read[plistkey]
+print(manifest)
